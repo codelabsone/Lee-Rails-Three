@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get "cars" => "cars#index"
+  resources :inventories
+  root "cars#index"
+  resources :cars
 end

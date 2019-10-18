@@ -1,0 +1,51 @@
+<%= form_for(@cars) do |f| %>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :year %>
+        <%= f.text_field :year, autofocus: true %>
+      </li>
+      <li class="required">
+        <%= f.label :make %>
+        <%= f.text_field :make %>
+      </li>
+      <li>
+        <%= f.label :model %>
+        <%= f.text_field :model %>
+      </li>
+      <li>
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+      </li>
+      <li>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+      </li>
+      <li>
+        <%= f.label :mileage %>
+        <%= f.text_field :mileage %>
+      </li>
+      <li>
+        <%= f.label :engine %>
+        <%= f.text_field :engine %>
+      </li>
+      <li>
+        <%= f.label :transmission %>
+        <%= f.text_field :transmission %>
+      </li>
+      <li>
+        <%= f.label :drive_train %>
+        <%= f.text_field :drive_train %>
+      </li>
+      <li>
+        <%= f.label :color %>
+        <%= f.text_field :color %>
+      </li>
+      <li>
+        <%= f.label :int_color %>
+        <%= f.text_field :int_color %>
+      </li>
+    </ol>
+      <%= f.submit %>
+  </fieldset>
+<% end %>

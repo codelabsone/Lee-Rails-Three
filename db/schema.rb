@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190924044237) do
+ActiveRecord::Schema.define(version: 20191015005001) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "year"
     t.string "make"
     t.string "model"
-    t.string "color"
-    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
@@ -26,6 +24,25 @@ ActiveRecord::Schema.define(version: 20190924044237) do
     t.string "transmission"
     t.string "drive_train"
     t.string "int_color"
+    t.integer "price"
+    t.string "color"
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.string "name"
+    t.integer "year"
+    t.string "make"
+    t.string "model"
+    t.string "category"
+    t.integer "price"
+    t.integer "mileage"
+    t.string "engine"
+    t.string "tranmission"
+    t.string "drive_train"
+    t.string "color"
+    t.string "int_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,13 +1,13 @@
-
-<h1><%pluralize(@cars.size, 'Car') %></h1>
-<% @cars.each do |car| %>
+<article>
 <ul>
+    <%= image_for(@cars) %>
+    <%= @car.title %>
 <strong>
 <%= car.year %> <%= car.make%>
   <%= car.model %> <%= car.category%>
   <%= number_to_currency(car.price) %>
 </ul>
-</strong>
+<strong>
 <p>
   <th>Mileage:</th>
     <%= car.mileage %>
@@ -29,4 +29,8 @@
     <th>Int. Color:</th>
     <%= car.int_color %>
   </p>
-<% end %>
+  </article>
+
+  <nav>
+    <%= link_to "Edit", edit_car_path(@car) %>
+  </nav>
